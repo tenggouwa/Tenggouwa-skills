@@ -1,0 +1,13 @@
+{
+  "name": "persistent-execution",
+  "version": "1.0.0",
+  "description": "Drive multi-step or long-running tasks to verified, safe completion.",
+  "repository": "https://github.com/tenggouwa/Tenggouwa-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Persistent Execution",
+    "shortDescription": "Drive long tasks to verified, safe completion",
+    "category": "Productivity"
+  }
+}

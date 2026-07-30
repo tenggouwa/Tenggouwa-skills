@@ -1,0 +1,20 @@
+{
+  "name": "tenggouwa-skills",
+  "interface": {
+    "displayName": "Tenggouwa Skills"
+  },
+  "plugins": [
+    {
+      "name": "persistent-execution",
+      "source": {
+        "source": "local",
+        "path": "./plugins/persistent-execution"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
