@@ -1,13 +1,13 @@
 {
   "name": "persistent-execution",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Drive multi-step or long-running tasks to verified, safe completion.",
   "repository": "https://github.com/tenggouwa/Tenggouwa-skills",
   "license": "MIT",
   "skills": "./skills/",
   "interface": {
-    "displayName": "Persistent Execution",
-    "shortDescription": "Drive long tasks to verified, safe completion",
+    "displayName": "Persistent Execution (Goal mode)",
+    "shortDescription": "Use with /goal for long tasks that must not stop",
     "category": "Productivity"
   }
 }

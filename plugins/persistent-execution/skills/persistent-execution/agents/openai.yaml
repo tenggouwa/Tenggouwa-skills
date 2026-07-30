@@ -1,4 +1,4 @@
 interface:
-  display_name: "Persistent Execution"
-  short_description: "Drive long tasks to verified, safe completion"
-  default_prompt: "Use $persistent-execution to carry this task through to a verified, safe completion."
+  display_name: "Persistent Execution (Goal mode)"
+  short_description: "Use with /goal for long tasks that must not stop"
+  default_prompt: "/goal Use $persistent-execution to carry this task through to a verified, safe completion."

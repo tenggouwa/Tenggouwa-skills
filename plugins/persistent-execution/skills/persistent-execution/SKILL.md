@@ -1,11 +1,25 @@
 ---
 name: persistent-execution
-description: Drive a multi-step or long-running task from the user's stated outcome to a verified, safe delivery. Use when the user says to keep going, finish end-to-end, do not stop or wait, handle a long task, diagnose and fix, or otherwise expects Codex to make autonomous progress through investigation, implementation, validation, and handoff.
+description: Drive a multi-step or long-running task from the user's stated outcome to a verified, safe delivery. For work that must continue across multiple cycles, use inside an active /goal. Use when the user says to keep going, finish end-to-end, do not stop or wait, handle a long task, diagnose and fix, or otherwise expects Codex to make autonomous progress through investigation, implementation, validation, and handoff.
 ---
 
 # Persistent execution
 
 Treat the user's requested outcome as the active objective. Continue working until it is achieved, a safety boundary requires authorization, or a concrete external dependency makes further progress impossible.
+
+## Operating mode
+
+This skill defines the execution protocol; it does not itself create a durable
+background run. For work with more than one meaningful stage, it must be used
+inside an active Codex `/goal` whose text contains a concrete outcome and
+verification evidence. A normal chat response may end after any tool call or
+progress update, even when work remains.
+
+If an active goal is available, keep the goal running and advance the next
+useful step. Never treat a progress report, a started CI job, an edited file,
+or the phrase "continuing" as a completion response. When a task cannot safely
+advance, report the exact authorization or external dependency that blocks the
+goal and leave it resumable.
 
 ## Establish the delivery contract
 

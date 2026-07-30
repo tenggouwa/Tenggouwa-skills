@@ -11,13 +11,28 @@ codex plugin marketplace add tenggouwa/Tenggouwa-skills && \\
   codex plugin add persistent-execution@tenggouwa-skills
 ```
 
-Start a new Codex task after installation, then invoke the skill as
-`$persistent-execution` or use a request that matches its description.
+For work that must not stop halfway, start an active Codex goal in a new task:
+
+```text
+/goal Use $persistent-execution to <state the outcome>. Do not finish until <state the verification evidence> passes.
+```
+
+For example:
+
+```text
+/goal Use $persistent-execution to finish the knowledge-graph remediation. Do not finish until the migration, tests, and CI are complete and the changed workflow has been verified.
+```
+
+`$persistent-execution` supplies the execution protocol; `/goal` is what keeps
+the task active across multiple work cycles. A normal chat turn can still end
+after a progress update, so it is not sufficient for a task that must continue
+without a follow-up from you.
 
 To update later:
 
 ```bash
-codex plugin marketplace upgrade tenggouwa-skills
+codex plugin marketplace upgrade tenggouwa-skills && \\
+  codex plugin add persistent-execution@tenggouwa-skills
 ```
 
 ## Included plugin
