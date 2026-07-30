@@ -1,0 +1,4 @@
+interface:
+  display_name: "Persistent Execution"
+  short_description: "Drive long tasks to verified, safe completion"
+  default_prompt: "Use $persistent-execution to carry this task through to a verified, safe completion."
